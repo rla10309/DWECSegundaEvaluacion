@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 2</title>
+</head>
+<body>
+
+    <!-- <a onclick="alert('Link desactivado'); return confirm('Va a acceder a cifplalaboral.es')" href="http://www.cifplalaboral.es">CIFP La Laboral</a> -->
+
+    <header>
+        <h2>DESARROLLO WEB EN ENTORNO CLIENTE</h2>
+        <h3>Ejemplo JavaScript</h3>
+    </header>
+    <nav>
+        <a href="http://www.cifplalaboral.es">CIFP La Laboral</a>
+        <a href="http://www.educastur.es">EDUCASTUR</a>
+    </nav>
+    <script>
+        var elemsA = document.getElementsByTagName('a');
+        // for(var i=0; i<elemsA.length; i++){
+        //     elemsA[i].onclick = function (){
+        //         return confirm('Vas a ser transferido hacia ' + this.href);
+        //     }
+        // }
+        //ALTERNATIVA
+        for(var i = 0; i<elemsA.length; i++){
+            elemsA[i].onclick = transferir;
+        }
+        function transferir(){
+            return confirm('Vas a ser transferido hacia ' + this.href);
+        }
+    </script>
+</body>
+</html>

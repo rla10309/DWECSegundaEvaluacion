@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos</title>
+</head>
+<body>
+    <section>
+        <!-- <button onclick="console.log('Hola')">Saludar</button> -->
+        <button id="pulsa1">Pulsa 1</button>
+        <button id="pulsa2">Pulsa 2</button>
+        <button id="pulsa3">Pulsa 3</button>
+        <button id="pulsador">PULSA</button>
+
+        <script>
+            var boton1 = document.getElementById('pulsa1');
+            //esto se ejecuta al cargar la página. el botón no tiene efecto
+            boton1.onclick = console.log('Se carga sin hacer click');
+            
+            //debemos asignar una referencia a la función que queremos ejecutar en el click
+            var boton2 = document.getElementById('pulsa2');
+            boton2.onclick = hagoClick; 
+            function hagoClick(){
+                console.log('Hago Click en el botón 2!');
+            }
+            function saludar(){
+                console.log('Hola Caracola');
+            }
+
+            //otra opción es asignar una función anónima
+            var boton3 = document.getElementById('pulsa3');
+            boton3.onclick = function(){
+                console.log('Hago click en el botón 3 (anónimo)');
+            }
+
+            //API WEB EVETTARGET
+            var boton = document.getElementById('pulsador');
+            boton.addEventListener('click', saludar);
+            boton.addEventListener('click', function(){
+                console.log('Hola Anónimo');
+            });
+
+        </script>
+
+    </section>
+</body>
+</html>

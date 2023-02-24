@@ -1,0 +1,15 @@
+.contenedor{
+    max-width: 1200px;
+    width: 50%;
+    margin: auto;
+    margin-top: 10rem;
+}
+
+div{
+    margin: 1rem;
+}
+input[type="submit"], input[type="reset"]{
+    font-size: 1rem;
+    margin: 1rem;
+    padding:5px 8px;
+}

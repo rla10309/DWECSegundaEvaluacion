@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+    <link rel="stylesheet" href="css/ejercicio01.css">
+</head>
+<body>
+    
+
+    <section class="contenedor">
+        <h1>Registro de Usuario DWEC</h1>
+        <form action="comprueba.php" method="post">
+            <div>
+                <label for="nombre">Nombre: </label>
+                <input type="text" id="nombre" maxlength="40">
+            </div>
+            <div>
+                <label for="anioNac">Año de nacimiento: </label>
+                <input type="number" min="1900" id="anioNac">
+            </div>
+            <div>
+                <label for="sexo">Sexo: </label>
+                <input type="radio" name="sexo" value="Hombre">
+                <label for="sexo">Hombre</label>
+                <input type="radio" name="sexo" value="Mujer">
+                <label for="mujer">Mujer</label>
+            </div>
+            <div>
+                <label for="usuario">Usuario: </label>
+                <input type="text" id="usuario" maxlength="6">
+            </div>
+            <div>
+                <label for="contrasena">Contraseña: </label>
+                <input type="password" id="contrasena" minlength="6">
+            </div>
+           <button type="button"   onclick="comprobar();">Enviar</button>
+            <input type="reset" value="Borrar">
+        </form>
+        <script src="js/ejercicio01.js"></script>
+    </section>
+    
+</body>
+</html>
