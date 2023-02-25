@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Eventos</title>
+</head>
+<body onload="alert('La página se ha cargado correctamente')">
+    <h1>Modelo de registro de eventos en línea</h1>
+    <!--Cada elemento XHTML tiene sus posibles eventos como propiedades: puede tener un evento de cada tipo. El nombre del evento es "on" seguido de el nombre de la acción-->
+    <!--Manejadores como atributo de una etiqueta XHTML-->
+
+    <h3 id="cab1" onclick="this.innerHTML='JavaScript en XHTML'" 
+    onmouseover="this.style.background='red'"
+    onmouseout="this.style.background='white'">Pulsa aquí para ver lo que se ejecuta</h3>
+
+    <!--h3 id="cab1" onclick="document.getElementById('cab1').innertHTML =...."-->
+    <!--Manejadores de funciones externas-->
+
+    <h3 onclick="cambiar(this)">Pulsa aquí para ver lo que se ejecuta</h3>
+    <script>
+        function cambiar(elem){
+            elem.innerHTML= "JavaScript en XHTM y función externa";
+        }
+    </script>
+    <!--Hay acciones que desencadenan varios eventos. Ej. submit desencadena onmousedown, onmouseup, onsubmit.
+    Para evitar que el navegador ejecute la acción por dejefecto necesitamos añadir return false-->
+    <a href="http://www.google.com" onclick="alertar(); return false">Pulsa aquí para ver que se ejecutua</a>
+    <script>
+        function alertar(){
+            alert("Vamos a Google");
+        }
+    </script>
+    <br/>
+    <br/>
+    <a href="http://www.google.com" onclick="return preguntar();">Pulsa aquí para ver qué se ejecuta</a>
+    <script>
+        function preguntar(){
+            return confirm("¿Deseas ir a Google?");
+        }
+    </script>
+
+    <!--Carga de página con el evento onload-->
+    <!--Escribimos la etiqueta <body onload="funcionAEjecutar..."-->
+</body>
+</html>

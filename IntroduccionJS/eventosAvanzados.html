@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evenots. Modelo de registro de eventos avanzados del W3C</title>
+    <!--EVENTO: 
+        Mecanismo que se acciona cuando el usuario realiza un cabmio sobre la página web.Capturar un evento es programar una acción para que se realice una tarea.
+        El encargado de getionar los eventos es el DOM (Document Object Manager).
+        MANEJADOR: 
+        Acción que se va a manejar. Por ejemplo, en el click (hacer click con el ratón) el manejador es onclick-->
+</head>
+<body>
+    <h1>Modelo de eventos avanzados del W3C</h1>
+    <h3 id="w3c">Modelo del W3C</h3>
+    <h3 id="w3canonima">Modelo del W3C con funciones anónimas</h3>
+
+    <script>
+        /* identificar el elemento:
+            elemento.addEventListener("<evento_sin_on>",<funcion>, <false|true> );*/
+        var label1 = document.getElementById("w3c");
+        label1.addEventListener("click", saludarUnaVez, false);
+        label1.addEventListener("click", colorearse, false);
+        label1.addEventListener("mouseover", fondo, false);
+
+        function saludarUnaVez(){
+            alert("Hola Caracola");
+            label1.removeEventListener("click", saludarUnaVez);
+        }
+        function colorearse(){
+            label1.style.color = "red";
+        }
+        function fondo(){
+           label1.style.background = "blue";
+        }
+
+        /* Funciones anónimas */
+        /* elemento.addEventListener("<evento_sin_on>", function(){<codigo_funcion>};, false*/
+        var label2 = document.getElementById("w3canonima");
+        label2.addEventListener("click", function(){
+            this.style.background = "#C0C0C0";
+        });
+
+    </script>
+</body>
+</html>
