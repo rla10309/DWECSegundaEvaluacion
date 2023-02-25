@@ -10,7 +10,7 @@
 <body>
     <main class="container">
         <h1>Registro de usuario DWEC</h1>
-        <form action="" method="get">
+        <form action="" method="post" id="miFormulario">
             <div class="flex">
                 <label for="nombre" >Nombre:</label>
                 <input type="text" id="nombre"/>
@@ -39,11 +39,12 @@
                 <input type="password" id="passw" min="6" max="8" size="8"/>
             </div>
             <div>
-                <input type="submit" value="Enviar"/>
+                <input type="submit" value="Enviar" id="enviar"/>
                 <input type="reset" value="Borrar"/>
             </div>
            
         </form>
     </main>
+    <script src="js/validaFormulario.js"></script>
 </body>
 </html>
