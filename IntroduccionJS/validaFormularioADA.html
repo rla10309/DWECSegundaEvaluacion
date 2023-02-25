@@ -10,7 +10,8 @@
 <body>
     <main class="container">
         <h1>Registro de usuario DWEC</h1>
-        <form action="" method="get">
+
+        <form action="procesar.php" method="post" id="miFormulario">
             <div class="flex">
                 <label for="nombre" >Nombre:</label>
                 <input type="text" id="nombre" name="nombre"/>
@@ -40,14 +41,15 @@
             </div>
             <div class="flex"> 
                 <label for="mayor">Mayor de 18 años:</label>
-                <input type="checked" id="mayor" name="mayor"/>
+                <input type="checkbox" id="mayor" name="mayor"/>
             </div>
            <div>
-                <input type="submit" value="Enviar"/>
-                <input type="reset" value="Borrar"/>
+                <input type="submit" value="Enviar" id="enviar"/>
+                <input type="reset" value="Borrar" id="borrar"/>
             </div>
            
         </form>
     </main>
+    <script src="js/validaFormularioADA.js"></script>
 </body>
 </html>
