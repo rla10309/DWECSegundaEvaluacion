@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+div#capa1{
+    background-color: lightsteelblue;
+    width: 400px;
+    height: 400px;
+    margin: 100px auto;
+}
