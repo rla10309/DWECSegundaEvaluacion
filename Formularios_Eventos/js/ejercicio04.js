@@ -1,17 +1,11 @@
 var divBlue = document.getElementById("capa1");
 
-divBlue.addEventListener("mouseover", cambiaColor);
-divBlue.addEventListener("mouseout", cambiaColorOriginal);
-
-function cambiaColor(){
+divBlue.addEventListener("mouseover", function(){
     divBlue.style.background = "yellow";
-}
-function cambiaColorOriginal(){
-    divBlue.style.background = "lightsteelblue"
-}
-
-
-
+});
+divBlue.addEventListener("mouseout", function(){
+    divBlue.style.background = "lightsteelblue";
+});
 
 
 
