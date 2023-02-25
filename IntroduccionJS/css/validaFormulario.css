@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 60%;
+    margin: 10% auto;
+}
+h1{
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+.inline{
+    display: inline;
+    margin-right: 1rem;
+}
+form{
+    width: 80%;
+    margin: 0 auto;
+}
+div{
+    margin-bottom: 2rem;
+}
+label, input{
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+input[type="radio"]{
+    font-size: 3rem;
+}
+label[for="sexo"]{
+    margin-right: 2rem ;
+}
+input{
+    border-radius: 5px;
+    border: 0.5px solid lightslategray;
+    
+}
+.flex{
+    display:flex;
+    justify-content: space-between;
+}
+.no-margen{
+    margin: 0;
+}
+input[type="submit"], input[type="reset"]{
+    padding: 0.5rem 1.5rem;
+    margin-right: 1rem;
+
+}SS

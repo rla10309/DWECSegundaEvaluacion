@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validacion de Formulario</title>
+    <link rel="stylesheet" href="css/validaFormulario.css" type="text/css">
+</head>
+<body>
+    <main class="container">
+        <h1>Registro de usuario DWEC</h1>
+        <form action="" method="get">
+            <div class="flex">
+                <label for="nombre" >Nombre:</label>
+                <input type="text" id="nombre" name="nombre"/>
+            </div>
+            <div class="flex">
+                <label for="tfno">Teléfono:</label>
+                <input type="phone" id="tfno" name="tfno"/>
+            </div>
+            <div class="flex">
+                <label for="fechaNac">Fecha de nacimiento:</label>
+                <div class="no-margen">
+                    <input type="text" size="1" name="dia" id="dia"/>
+                    <input type="text" size="1" name="mes" id="mes"/>
+                    <input type="text" size="2" name="year" id="year"/>
+                </div>
+            </div>
+            <div>
+                <label for="sexo">Sexo:</label>
+                <div class="inline">
+                    <input type="radio" id="mujer" name="sexo"/>
+                    <label for="mujer">Mujer</label>
+                </div>
+                <div class="inline">
+                    <input type="radio" id="hombre" name="sexo"/>
+                    <label for="hombre">Hombre</label>
+                </div>
+            </div>
+            <div class="flex"> 
+                <label for="mayor">Mayor de 18 años:</label>
+                <input type="checked" id="mayor" name="mayor"/>
+            </div>
+           <div>
+                <input type="submit" value="Enviar"/>
+                <input type="reset" value="Borrar"/>
+            </div>
+           
+        </form>
+    </main>
+</body>
+</html>
