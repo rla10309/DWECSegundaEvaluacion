@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8 Cuaderno Ejercicios UT5</title>
+    <link rel="stylesheet" href="css/ejercicio07.css">
+</head>
+<body>
+
+    <section id="info" class="container">
+     
+    </section>
+
+    <script>
+        window.onload = function(){
+            addEventListener("keypress", muestraTecla);
+                
+        }
+        function muestraTecla(e){
+            var texto = "<h1>TECLADO</h1><p>Tecla: "+ e.key+"</p><p>Código: "+e.keyCode+"</p>"; 
+            document.getElementById("info").innerHTML = texto;
+
+            
+        }
+    </script>
+    
+</body>
+</html>

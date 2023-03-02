@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 07 Cuaderno Ejercicios UT5</title>
+    <link rel="stylesheet" href="css/ejercicio07.css">
+
+</head>
+<body>
+    <section id="container">
+    <div id="info" >
+       
+    </div>
+    <button id="boton">Pulsa aquí</button>
+</section>
+    
+
+    <script>
+        window.onload = function(){
+            
+            addEventListener("mouseover", infoMouse);
+            document.getElementById("boton").addEventListener("click", cambiaColor);
+            
+        }
+
+        function infoMouse(e){
+            var evento = e || window.event;
+            var coordenadaX = evento.clientX;
+            var coordenadaY = evento.clientY;
+
+            var texto = "<h1>RATÓN</h1><p>Página: [" +coordenadaX +", " + coordenadaY+"]</p>";
+            document.getElementById("info").innerHTML = texto;
+        }
+
+        function cambiaColor(){
+            document.getElementById("container").style.background = "pink";
+
+        }
+
+    </script>
+</body>
+</html>
