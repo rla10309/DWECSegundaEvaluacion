@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10 Cuaderno Ejercicios UT5</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 400px;
+            margin: 100px auto;
+            box-shadow: 5px 5px 5px gray;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding: 2rem;
+            border: 0.5px solid gainsboro;
+        }
+
+        .container * {
+            margin-bottom: 2rem;
+        }
+
+        #boton {
+            border-radius: 5px;
+            border: 0.5px solid gainsboro;
+            padding: 1rem;
+            font-size: 1rem;
+            background-color: DeepSkyBlue;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="container">
+        <div>
+            <h1>LA CUENTA ATRÁS</h1>
+            <h2>Tiempo restante...</h2>
+            <p id="info"></p>
+
+            <button id="boton">ACTIVA LA BOMBA</button>
+        </div>
+    </header>
+    <script>
+        window.onload = iniciar;
+        function iniciar() {
+            var boton = document.getElementById("boton");
+            boton.addEventListener("click", cuentaAtras);
+        }
+        function cuentaAtras() {
+            let cont = 11;
+            let intervalos = setInterval(function () {
+                cont--;
+                document.getElementById("info").innerHTML = cont;
+             
+                if(cont == 0){
+                    clearInterval(intervalos);
+                    alert("BOOOOM");
+            }
+            }, 1000);
+            
+            
+        }
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

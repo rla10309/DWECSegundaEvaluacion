@@ -5,3 +5,9 @@
     border: 1px solid gainsboro;
     padding: 1rem;
 }
+.container{
+    width: 500px;
+    margin: 100px auto;
+    border: 1px solid gainsboro;
+    padding: 1rem;
+}

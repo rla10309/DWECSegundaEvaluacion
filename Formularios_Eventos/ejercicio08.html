@@ -19,6 +19,7 @@
                 
         }
         function muestraTecla(e){
+            console.log(e);
             var texto = "<h1>TECLADO</h1><p>Tecla: "+ e.key+"</p><p>Código: "+e.keyCode+"</p>"; 
             document.getElementById("info").innerHTML = texto;
 
