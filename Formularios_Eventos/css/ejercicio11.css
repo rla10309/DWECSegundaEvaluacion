@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 400px;
+    margin: 100px auto;
+    box-shadow: 5px 5px 5px gray;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 2rem;
+    border: 0.5px solid gainsboro;
+}
+.contenedor{
+    *padding: 5rem;
+    text-align: center;
+    
+}
+img{
+    position: relative;
+    
+}
+ul{
+    list-style-type: none;
+}
+ul li{
+    padding: 8px 0;
+}

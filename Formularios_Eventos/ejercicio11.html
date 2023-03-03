@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 11 Cuaderno Ejercicios UT5</title>
+    <link rel="stylesheet" href="css/ejercicio11.css">
+
+</head>
+
+<body>
+
+    <section class="container">
+        <figure class="contenedor">
+            <img src="img/bomba.jpg" alt="bomba" id="imagen">
+        </figure>
+        <ul>
+            <li id="right">Mover 50px a la derecha</li>
+            <li id="left">Mover 50px a la izquierda</li>
+            <li id="top">Mover 100px arriba</li>
+            <li id="restore">Mover a la posición incial</li>
+        </ul>
+
+    </section>
+    <script>
+        var clickRight = document.getElementById("right");
+        var clickLeft = document.getElementById("left");
+        var clickTop = document.getElementById("top");
+        var clickRestore = document.getElementById("restore");
+        var imagen = document.getElementById("imagen");
+
+        window.onload = function () {
+
+            clickRight.addEventListener("click", moveRight);
+            
+            clickLeft.addEventListener("click", function () {
+                this.style.color = "gold";
+                imagen.style.right = "20px";
+                setTimeout((() => this.style.color = "black"), 1000);
+            });
+            clickTop.addEventListener("click", function () {
+                this.style.color = "gold";
+                imagen.style.bottom = "100px";
+                setTimeout((() => this.style.color = "black"), 1000);
+            });
+            clickRestore.addEventListener("click", function () {
+                this.style.color = "gold";
+                imagen.style.left = "0";
+                imagen.style.top = "0";
+                setTimeout((() => this.style.color = "black"), 1000);
+
+            });
+
+        }
+        function moveRight() {
+            clickRight.style.color = "gold";
+            imagen.style.left = "20px";
+
+            setTimeout(function () {
+                clickRight.style.color = "black";
+                imagen.style.left = "0px";
+                imagen.style.top = "0px";
+        }, 1000);
+    }
+       
+
+
+
+    </script>
+
+</body>
+
+</html>
