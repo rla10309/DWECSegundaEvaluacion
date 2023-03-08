@@ -26,10 +26,13 @@ ul li{
     justify-content: space-between;
     align-items: center;
 }
+
+
+
 form{
     width: 70%;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 1.5rem;
     border: 1px solid gainsboro;
     border-radius: 8px;
     background-color: PapayaWhip;
@@ -40,6 +43,11 @@ input, select{
     border-radius: 8px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1rem;
+}
+label{
+    font-size: 1.2rem;
+    
+    
 }
 .botones {
     text-align: center;
