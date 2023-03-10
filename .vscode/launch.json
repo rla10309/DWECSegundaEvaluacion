@@ -1,0 +1,34 @@
+{
+    // Use IntelliSense para saber los atributos posibles.
+    // Mantenga el puntero para ver las descripciones de los existentes atributos.
+    // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "LaunchChrome",
+            "file": "C:\\Users\\usuario\\Desktop\\DAW PILAR\\CLIENTE\\DWECSegunda"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Lanza Chrome",
+            "file": "C:\\Users\\usuario\\Desktop\\DAW PILAR\\CLIENTE\\DWECSegunda"
+           
+        },
+        {
+            "type": "msedge",
+            "name": "edge",
+            "request": "launch",
+            "file": "C:\\Users\\usuario\\Desktop\\DAW PILAR\\CLIENTE\\DWECSegunda"
+        },
+        {
+            "type": "firefox",
+            "request": "launch",
+            "name": "Firefox",
+            "file": "C:\\Users\\usuario\\Desktop\\DAW PILAR\\CLIENTE\\DWECSegunda"
+        }
+        
+    ]
+}

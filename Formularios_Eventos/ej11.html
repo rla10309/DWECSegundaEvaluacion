@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/ejercicio11.css">
+</head>
+<body>
+    <section class="container">
+        <figure class="contenedor">
+            <img src="img/bomba.jpg" alt="bomba" id="imagen">
+        </figure>
+        <ul>
+            <li id="right">Mover 50px a la derecha</li>
+            <li id="left">Mover 50px a la izquierda</li>
+            <li id="top">Mover 100px arriba</li>
+            <li id="restore">Mover a la posición incial</li>
+        </ul>
+
+    </section>
+    <script>
+        let imagen = document.getElementById("imagen");
+        let x = 0;
+        let y = 0;
+
+        window.onload = movimientos;
+        function movimientos(){
+            document.getElementById("right").addEventListener("click", moveRight);
+            document.getElementById("left").addEventListener("click", moveLeft);
+            // document.getElementById("top").addEventListener("click", moveTop);
+            // document.getElementById("restore").addEventListener("click", restoreElement);
+        }
+
+        function moveRight(){
+            x = x + 5;
+            imagen.style.left = x+'px';
+        }
+        function moveLeft(){
+            x = x - 5;
+            imagen.style.left = x+'px';
+        }
+    </script>
+</body>
+</html>

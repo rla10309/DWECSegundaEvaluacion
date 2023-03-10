@@ -13,13 +13,18 @@
     border: 0.5px solid gainsboro;
 }
 .contenedor{
-    *padding: 5rem;
-    text-align: center;
+    padding: 5rem;
+    
+    
+}
+figure{
+    position: relative;
     
 }
 img{
-    position: relative;
-    
+    position: absolute;
+    top: 0;
+    left: 100px;
 }
 ul{
     list-style-type: none;
@@ -27,3 +32,5 @@ ul{
 ul li{
     padding: 8px 0;
 }
+
+/*codigo de las teclas: arriba = 38, iz=37, der=40

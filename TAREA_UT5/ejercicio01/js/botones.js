@@ -28,11 +28,29 @@ function ejercicioBotones() {
         }
         var salto = document.createElement("br");
         contenedor.appendChild(salto);
+        
       }
+      var b = contenedor.getElementsByClassName("boton");
+      var eleccion;
+      var cont = 0;
+      for(var i=0;i<b.length;i++){
+        b[i].addEventListener("click", function(e){
+          eleccion = e.target.id;
+          console.log(eleccion);
+          for(var f=1;f<=dato;f++){
+            for(var c=1;c<=dato;c++){
+              cont++;
+              if(cont == eleccion){
+                alert(`Has pulsado el botón situado el la fila ${f} columna ${c}`);
+              }
+            }
+          }
+        });
+      }
+     
+
+        
     }
-    var b = document.getElementsByClassName("boton");
-    console.log(b);
- 
 
   }
 }
