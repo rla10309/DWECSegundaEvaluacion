@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 400px;
+    border: 1px solid black;
+    margin: 100px auto;
+}
+header{
+    padding: 3rem;
+    text-align: center;
+}
+table{
+    width: 100%;
+}
+td{
+    height: 2rem;
+    border: 1px solid gray;
+    text-align: center;
+}
+.amarillo{
+    background-color: yellow;}
+.verde{
+    background-color: green;
+}
+.negro{
+    background-color: black;
+}
+.rojo{
+    background-color: red;
+}
+.azul{
+    background-color: blue;
+}
+.blanco{
+    background-color: none;
+}
