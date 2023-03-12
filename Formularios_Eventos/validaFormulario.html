@@ -9,25 +9,29 @@
 </head>
 <body>
     <section class="container">
-        <form action="http://google.es" id="formulario" name="formulario" method="get">
+        <form  id="formulario" name="formulario" action="http://www.google.es" method="get">
             <fieldset>
                 <legend>DWEC - Validación de un formulario</legend>
                 <p>
                     <label for="nombre">Nombre:</label>
                     <input type="text" id="nombre"/>
                 </p>
+                <p id="infoname"></p>
                 <p>
                     <label for="apellidos">Apellidos:</label>
                     <input type="text" id="apellidos"/>
                 </p>
+                <p id="infoape"></p>
                 <p>
                     <label for="edad">Edad:</label>
                     <input type="text" id="edad"/>
                 </p>
+                <p id="infoedad"></p>
                 <p>
                     <label for="matricula">Matrícula Coche:</label>
                     <input type="text" id="matricula"/>
                 </p>
+                <p id="infomatricula"></p>
                 <p>
                     <label for="provincia">Provincia:</label>
                     <select name="provincia" id="provincia">
@@ -46,6 +50,7 @@
 
         </form>
     </section>
+    <script src="js/validaFormulario.js"></script>
     
 </body>
 </html>
