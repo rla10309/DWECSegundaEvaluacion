@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/dragdrop.css">
+</head>
+<body>
+    <section id="contenedor">
+        <article id="section1">
+            <div id="div1" draggable="true" ondragstart="dragstart(this, event)">1</div>
+            <div id="div2" draggable="true" ondragstart="dragstart(this, event)">2</div>
+            <div id="div3" draggable="true" ondragstart="dragstart(this, event)">3</div>
+        </article>
+        <article id="section2"  ondrop="drop(this,event)" ondragenter="return false" ondragover="return over(this,event)">
+        </article>
+        <article id="section3" ondrop="drop(this,event)" ondragenter="return false" ondragover="return over(this,event)">
+            
+        </article>
+    </section>
+    <script src="js/dragdrop.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+#contenedor1 {
+    background: #FFA500;
+    /* color de fondo del contenedor receptor */
+    width: 200px;
+    /* anchura de 200 píxeles */
+    height: 200px;
+    /* altura de 200 píxeles */
+    position: absolute;
+    /* posición absoluta para indicar margenes en base a la ventana */
+    bottom: 100px;
+    /* margen inferior*/
+    right: 200px;
+    /* margen de la derecha */
+    color: #045FB4;
+    /* color de la letra */
+    text-align: center;
+    /* alineación del texto */
+}
+
+#contenedor2 {
+    background: #FF0500;
+    /* color de fondo del contenedor receptor */
+    width: 200px;
+    /* anchura de 200 píxeles */
+    height: 200px;
+    /* altura de 200 píxeles */
+    position: absolute;
+    /* posición absoluta para indicar margenes en base a la ventana */
+    bottom: 400px;
+    /* margen inferior*/
+    right: 200px;
+    /* margen de la derecha */
+    color: #045FB4;
+    /* color de la letra */
+    text-align: center;
+    /* alineación del texto */
+}

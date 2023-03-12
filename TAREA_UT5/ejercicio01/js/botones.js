@@ -39,6 +39,7 @@ function ejercicioBotones() {
 
     /*creamos un evento para eliminar la botonera creada, en caso de que la hubiera*/
     entrada.addEventListener("click", function () {
+      var saltos = document.querySelectorAll("br");
       if (vueltas != 0) {
         var bt = b.length - 1;
         for (var i = 1; i <= tamaño; i++) {
@@ -46,9 +47,14 @@ function ejercicioBotones() {
             contenedor.removeChild(b[bt]); /*elimina los botones creados*/
             bt--;
           }
+         
         }
         n = 1;
-        entrada.textContent = "";
+        bt = 0;
+        for(var i=0;i<saltos.length;i++){
+          contenedor.removeChild(saltos[i]);
+        }
+        
       }
     });
     /*Condición para que siga adelante en caso de que los datos sean correctos o que muestra un mensaje en el caso de que no*/

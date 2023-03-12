@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="css/formulario.css">
+</head>
+<body>
+    <section class="container">
+        <form action="http://google.es" id="formulario" name="formulario" method="get">
+            <fieldset>
+                <legend>DWEC - Validación de un formulario</legend>
+                <p>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre"/>
+                </p>
+                <p>
+                    <label for="apellidos">Apellidos:</label>
+                    <input type="text" id="apellidos"/>
+                </p>
+                <p>
+                    <label for="edad">Edad:</label>
+                    <input type="text" id="edad"/>
+                </p>
+                <p>
+                    <label for="matricula">Matrícula Coche:</label>
+                    <input type="text" id="matricula"/>
+                </p>
+                <p>
+                    <label for="provincia">Provincia:</label>
+                    <select name="provincia" id="provincia">
+                        <option value="" selected>Seleccione Provincia</option>
+                        <option value="asturias">Asturias</option>
+                        <option value="madrid">Madrid</option>
+                        <option value="sevilla">Sevilla</option>
+                        <option value="pontevedra">Pontevedra</option>
+                    </select>
+                </p>
+                <p>
+                    <button type="reset" id="limpiar">Limpiar</button> 
+                    <button type="submit" id="enviar">Enviar</button>
+                </p>
+            </fieldset>
+
+        </form>
+    </section>
+    
+</body>
+</html>

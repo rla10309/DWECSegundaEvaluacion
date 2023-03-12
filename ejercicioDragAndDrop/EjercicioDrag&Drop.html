@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Darg &amp; Drop </title>
+    <meta charset="utf-8" />
+    <link type="text/css" href="css/estilo.css" rel="StyleSheet" />
+</head>
+
+<body>
+    <section>
+        <h1>Cada Bart a su Contenedor</h1>
+    </section>
+
+    <!-- ondragstrat es el evento que se produce cuando el objeto arrastable  se empieza a mover -->
+
+    <!-- ondragenter es el evento que se produce cuando el objeto arrastable entra en la zona destino -->
+
+    <!-- ondragover evento que produce mientras el usuario mueve el objeto arrastable sobre el destino. Lo que hace es permitir que se pueda soltar el elemento sobre otro-->
+
+    <!-- ondragleave se produce cuando el elemento arrastrado abandona el objetivo de soltar-->
+
+    <!-- draggable true para activar el arrastre del elemento-->
+
+  	<img id="bart1" src="img/imagen1.png" draggable="true" ondragstart="dragstart(this, event)" alt="Figura1" title="Figura 1"/><br/>
+	<img id="bart2" src="img/imagen2.png" draggable="true" ondragstart="dragstart(this, event)" alt="Figura2" title="Figura2" /><br/>
+		<div id="contenedor1" ondrop="drop(this, event)" ondragenter="return false" ondragover="return over(this,event)"><label>Contenedor1</label><br></div>
+		<div id="contenedor2" ondrop="drop(this, event)" ondragenter="return false" ondragover="return over(this,event)"><label>Contenedor 2</label><br></div>
+    <section>
+        <header>
+            <h1>Acciones</h1>
+        </header>
+        <p id="info"></p>
+    </section>
+</body>
+<script src="js/ejerciciodragdrop.js"></script>
+
+</html>
