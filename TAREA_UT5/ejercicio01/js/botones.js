@@ -22,6 +22,7 @@ function ejercicioBotones() {
   
   boton.addEventListener("click", generaBotones);
 
+
   
   /**
    * generaBotones
@@ -36,27 +37,21 @@ function ejercicioBotones() {
     var b = contenedor.getElementsByClassName("boton");
     /*Párrafo para mostrar el mensaje de error, si lo hubiera*/
     var alerta = document.createElement("p");
+   
+
+
 
     /*creamos un evento para eliminar la botonera creada, en caso de que la hubiera*/
-    entrada.addEventListener("click", function () {
-      var saltos = document.querySelectorAll("br");
+    entrada.addEventListener("click", function (e) {
+      var saltos = contenedor.querySelectorAll("br");
+      var elementos = contenedor.querySelectorAll(".boton");
+      entrada.value = '';
       if (vueltas != 0) {
-        var bt = b.length - 1;
-        for (var i = 1; i <= tamaño; i++) {
-          for (var j = 1; j <= tamaño; j++) {
-            contenedor.removeChild(b[bt]); /*elimina los botones creados*/
-            bt--;
-          }
-         
-        }
-        n = 1;
-        bt = 0;
-        for(var i=0;i<saltos.length;i++){
-          contenedor.removeChild(saltos[i]);
-        }
-        
-      }
-    });
+        saltos.forEach(s => s.remove());
+        elementos.forEach(elem => elem.remove());
+      n=1;
+    }
+  });
     /*Condición para que siga adelante en caso de que los datos sean correctos o que muestra un mensaje en el caso de que no*/
     if (tamaño === "" || tamaño < 2) {
       alerta.setAttribute("class", "error");
