@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <ul>
+            <li>PAN</li>
+            <li>CAFE</li>
+            <li>TOMATES</li>
+            <li>PERAS</li>
+        </ul>
+
+        <p id="texto">Pincha en el botón para eliminar un elemento</p>
+       <button id="elimina">ELIMINA</button>
+    </section>
+</body>
+<script>
+    window.onload = function(){
+        document.getElementById("elimina").addEventListener("click", eliminar);
+        
+
+        function eliminar(){
+            let elementos = document.querySelectorAll("li");
+            let tamaño = elementos.length;
+            if(tamaño>0){    
+                elementos[0].remove();
+            } else {
+          
+                document.getElementById("texto").innerHTML = "Nada que borrar";
+                document.getElementById("elimina").style.visibilit = "hidden";
+            }
+        }
+
+    }
+</script>
+</html>

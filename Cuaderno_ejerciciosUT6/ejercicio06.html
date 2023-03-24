@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            margin: 10px;
+        }
+        #btn{
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form action="#saludo" id="formulario">
+        <div>
+            <label for="nombre" required >Nombre: </label>
+            <input type="text" id="nombre"/>
+        </div>
+        <div>
+            <label for="apellidos">Apellido: </label>
+            <input type="text" id="apellido"/>
+        </div>
+        <input type="submit" value="Envía datos" id="btn">
+    </form>
+
+    <p id="saludo"></p>
+
+    <script>
+        window.onload = function(){
+            let nombre = document.getElementById("nombre");
+            let apellido = document.getElementById("apellido");
+            document.getElementById("btn").addEventListener("click", saluda);
+        }
+
+        function saluda(){
+           
+            document.getElementById("saludo").innerHTML="Hola, " + nombre.value + " "  + apellido.value + ", gracias por rellenar este formulario";
+        }
+    </script>
+</body>
+</html>

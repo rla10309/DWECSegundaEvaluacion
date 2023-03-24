@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+
+
+    <p id="informacion">Información sobre el Document Object Model</p>
+    <label class="contenido">Esta unidad de Trabajo va del DOM</label>
+    <label>La siguiente será de AJAX</label>
+    <section>
+        <header>
+            <h1>DOM</h1>
+        </header>
+        <article class="contenido">
+            El DOM (Modelo de Objetos del Documento), es esencial en la programación de aplicaciones.
+        </article>
+    </section>
+    
+</body>
+
+<script>
+//Obtener elemento por id
+let porId = document.getElementById("informacion");
+console.log("Por id" + porId.outerHTML);
+//Obtener elementos por etiqueta
+let porEtiqueta = document.getElementsByTagName("label");
+
+
+for(var i=0;i<porEtiqueta.length;i++){
+    console.log(porEtiqueta[i]);
+}
+
+//Obtener elementos por class
+let porClass = document.getElementsByClassName("contenido");
+for(var i=0;i<porClass.length;i++){
+    console.log(porClass[i]);
+}
+
+</script>
+</html>

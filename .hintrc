@@ -22,6 +22,15 @@
         "html-has-lang": "off"
       }
     ],
-    "no-protocol-relative-urls": "off"
+    "no-protocol-relative-urls": "off",
+    "no-inline-styles": "off",
+    "detect-css-reflows/layout": "off",
+    "axe/name-role-value": [
+      "default",
+      {
+        "link-name": "off"
+      }
+    ],
+    "disown-opener": "off"
   }
 }
