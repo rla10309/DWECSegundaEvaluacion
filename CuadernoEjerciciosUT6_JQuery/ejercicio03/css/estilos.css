@@ -1,0 +1,15 @@
+.gris{
+    display: block;
+    border: 2px solid lightgrey;
+    color: lightgrey;
+    padding: 5px;
+    margin: 15px;
+}
+.color {
+    display: block;
+    border: 2px solid red;
+    color:red;
+    padding: 5px;
+    margin: 15px;
+   
+}

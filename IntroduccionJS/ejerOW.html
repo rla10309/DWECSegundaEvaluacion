@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript intermedio</title>
+    <style>
+        #mi_id_de_prueba {
+            color: tomato;
+        }
+    </style>
+</head>
+<body>
+
+    <p>Mi primera clase práctica de DOM</p>
+    <input type="text" id="entrada">
+    <button id="agregarTarea">Agregar tarea</button>
+
+    <u id="todo_list">
+
+    </u>
+    
+</body>
+
+<script type="text/javascript">
+    var parrafo = document.getElementsByTagName("p");
+
+    parrafo[0].style.color = "blue";
+    parrafo[0].style.backgroundColor = "yellow";
+
+    var tareas = [
+        "Hacer la colada",
+        "Preparar la cena",
+        "Tirar la basura"
+    ]
+    var todoList = document.querySelector("#todo_list");
+    console.log(todoList);
+
+    tareas.forEach(item => {
+        var li = document.createElement("li");
+        li.textContent = item;
+        todoList.appendChild(li);
+    })
+
+    var agregarBoton = document.getElementById("agregarTarea");
+    agregarBoton.addEventListener("click", function(){
+        var entrada = document.getElementById("entrada").value;
+        console.log(entrada);
+
+    })
+</script>
+</html>

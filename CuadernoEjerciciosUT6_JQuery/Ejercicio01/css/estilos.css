@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    width: 300px;
+    height: 100px;
+    margin: 2rem;
+    display: none;
+}
+#amarillo {
+    background-color: yellow;
+}
+#rojo {
+    background-color: red;
+}
+#azul {
+    background-color: blue;
+}
