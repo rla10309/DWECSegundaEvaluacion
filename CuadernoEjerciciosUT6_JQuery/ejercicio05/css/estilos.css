@@ -1,0 +1,35 @@
+.container {
+    width: 75%;
+    margin: 100px auto;
+}
+header {
+    margin-bottom: 4rem;
+}
+h1, h2 {
+    color: SeaGreen;
+}
+th, td {
+padding: 0.5rem 0.3rem;
+}
+input {
+    border: 1px solid gray;
+    background-color: gainsboro;
+}
+button {
+    border-radius: 5px;
+    border: 1px solid gray;
+    color: white;
+    padding: 3px 5px;
+}
+.editar {
+    background-color:YellowGreen;
+}
+.ocultar{
+    background-color: Olive;
+}
+.mostrar {
+    background-color: darkgray;
+}
+.eliminar {
+    background-color: crimson;
+}
