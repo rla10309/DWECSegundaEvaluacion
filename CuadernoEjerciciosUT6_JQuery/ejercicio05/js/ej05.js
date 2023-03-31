@@ -13,20 +13,28 @@ $(document).ready(function () {
             $(this).attr("readonly", "true");
     });
     //Ocultar
-    let tds = $("tbody tr td:nth-child(1)");
-    $(".ocultar").each(function(i){
-        $(this).click(function(e){
-            $("tbody tr td:nth-child(1)").eq(i).empty();
-            $("tbody tr td:nth-child(2)").eq(i).empty();
-        })
-    });
-    $(".mostrar").each(function(i){
-        $(this).click(function(e){
-            console.log(e);
-            $("tbody tr td:nth-child(1)").eq(i).text($("tbody tr td:nth-child(1)"));
-        })
-    })
+
     
+$(".ocultar").each(function(i){
+    $(this).click(function (e){
+        $("tbody tr td:nth-child(1)").eq(i).css("visibility", "hidden");
+        $("tbody tr td:nth-child(2)").eq(i).css("visibility", "hidden");
+    })
+     
+  });
+ $(".mostrar").each(function(i){
+    $(this).click(function (e){
+        $("tbody tr td:nth-child(1)").eq(i).css("visibility", "visible");
+        $("tbody tr td:nth-child(2)").eq(i).css("visibility", "visible");
+    })
+     
+  });
+    
+  $(".eliminar").each(function(i){
+    $(this).click(function(e){
+        $("tbody tr").eq(i).hide();
+    })
+  });
 
 
 
