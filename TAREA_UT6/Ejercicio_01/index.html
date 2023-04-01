@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+    <header>
+        <h1>Ejercicio 1 - Acceso a DOM con Formulario</h1>
+    </header>
+    <main class="container">
+        <form action="" class="formulario" id="formulario" name="formulario">
+            <fieldset id="datos">
+                <p><input type="text" id="nombre" name="nombre" >
+                    <label for="nombre">Nombre</label>
+                </p>
+                <p>
+                    <input type="text" id="apellidos" name="apellidos" >
+                    <label for="apellidos">Apellidos</label>
+                </p>
+                <p>
+                    <input type="email" id="email" name="email">
+                    <label for="email">Correo Electrónico</label>
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Sexo</legend>
+                <p>
+                    <input type="radio" id="hombre" name="sexo" value="hombre" checked>
+                    <label for="hombre">Hombre</label>
+                </p>
+                <p>
+                    <input type="radio" id="mujer" name="sexo" value="mujer">
+                    <label for="mujer">Mujer</label>
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Aficiones</legend>
+                <div class="d-flex">
+                    <p>
+                        <select name="aficiones" id="addaficiones" form="formulario" multiple>
+                            <option value="cine">Cine</option>
+                            <option value="leer">Leer</option>
+                            <option value="deporte">Deporte</option>
+                            <option value="Programar">Programar</option>
+                        </select>
+                    </p>
+                    <p>
+                        <button id="add">Añade afición &gt;&gt;</button>
+                    </p>
+                    <p>
+                        <button id="elimina">&lt;&lt; Elimina afición </button>
+                    </p>
+                    <p>
+                        <select name="aficiones" id="eliminaaficiones" form="formulario" multiple>
+                            <option value="cine" class="no_display">Cine</option>
+                            <option value="leer" class="no_display">Leer</option>
+                            <option value="deporte" class="no_display">Deporte</option>
+                            <option value="Programar" class="no_display">Programar</option>
+                        </select>
+                    </p>
+                </div>
+            </fieldset>
+            <input type="submit" value="Enviar" id="enviar"/>
+        </form>
+
+    </main>
+    <script src="js/ej01.js"></script>
+</body>
+</html>
