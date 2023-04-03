@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="parentElement">
+        <span id="childElement">foo bar</span>
+    </div>
+
+    <script>
+        //Creamos un elemento vacío
+        let sp1 = document.createElement("span");
+
+        let sp2 = document.getElementById("childElement");
+        let parentDiv = sp2.parentNode;
+
+        parentDiv.insertBefore(sp1, sp2);
+    </script>
+    
+</body>
+</html>
