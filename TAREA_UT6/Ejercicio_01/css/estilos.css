@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 70%;
+    margin: 0 auto;
+}
+header{
+    text-align: center;
+}
+fieldset#datos {
+    border: none;
+}
+.container {
+    width: 70%;
+    width: 0 auto;
+}
+.d-flex {
+    display: flex;
+    align-items: flex-end;
+    gap: 2rem;
+}
+.d-flex select{
+    padding: 1rem;
+}
+.d-flex select option {
+    padding: 3px;
+}
+.no_display {
+    display:none;
+}

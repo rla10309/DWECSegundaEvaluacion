@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="parentElement">
+        <span id="childElement">foo bar</span>
+    </div>
+
+    <script>
+        //Creamos el nodo a insertar
+        const newNode = document.createElement("span");
+
+        //almacenamos la referencia a su nodo padre
+        const parentDiv = document.getElementById("childElement").parentNode;
+
+        //test caso 1: childElement existe. Tod funciona correctamente
+        let sp2 = document.getElementById("childElement");
+        parentDiv.insertBefore(newNode, sp2);
+        //fin test 1
+
+        //test 2: childElement es undifined
+        sp2 = undefined; //no existe nodo con id childElement
+        parentDiv.insertBefore(newNode, sp2);
+        //fin test 2
+        //test 3: childElement is of Type "undefined" String
+
+        sp2 = "undefined";
+        parentDiv.insertBefore(newNode, sp2); // Genera "Type Error: Invalid Argument"
+    </script>
+</body>
+</html>
