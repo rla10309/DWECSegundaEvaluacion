@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+}
+.container {
+    width: 80%;
+    margin: 200px auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.principal {
+    display: flex;
+    justify-content: space-around;
+}
+section.texto {
+    width: 45%;
+}
+.titulo {
+    background-image: linear-gradient(to bottom, #f1e465,  #fcb947);
+    display: block;
+    padding: 0.8rem;
+}
+img {
+    width: 80%;
+    height: 80%;
+}
+div.radios {
+    display: flex;
+    justify-content:flex-start;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+#btn {
+    background-color: #5b4927;
+    border-radius: 5px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0.5rem 1rem;
+}
+.imagen {
+    text-align: center;
+}
+

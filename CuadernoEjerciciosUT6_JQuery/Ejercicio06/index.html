@@ -7,7 +7,71 @@
     <link rel="stylesheet" href="css/estilos.css">
     <title>Ejercicio 6 jQuery</title>
 </head>
-<body>
+<body class="container">
+    <header>
+        <h1>Laboratorio de Efectos</h1>
+    </header>
+    <main class="principal">
+        <section class="texto">
+            <label for="efectos" class="titulo">Efectos</label>
+            <div class="radios" id="efectos">
+                <p>
+                    <input type="radio" id="show" name="efectos" value="show">
+                    <label for="show">Show</label>
+                </p>
+                <p>
+                    <input type="radio" id="hide" name="efectos" value="hide">
+                    <label for="hide">Hide</label>
+                </p>
+                <p>
+                    <input type="radio" id="slide_down" name="efectos" value="slide_down">
+                    <label for="slide_down">Slide Down</label>
+                </p>
+                <p>
+                    <input type="radio" id="slide_up" name="efectos" value="slide_up">
+                    <label for="slide_up">Slide Up</label>
+                </p>
+                <p>
+                    <input type="radio" id="fade_out" name="efectos" value="fade_out">
+                    <label for="fade_out">Fade Out</label>
+                </p>
+                <p>
+                    <input type="radio" id="fade_to" name="efectos" value="fade_to">
+                    <label for="fade_to">Fade To</label>
+                </p>
+            </div>
+            <label for="velocidad" class="titulo">Velocidad</label>
+            <div class="radios">
+                <p>
+                    <input type="radio" id="no" name="velicidad" value="no">
+                    <label for="no">No</label>
+                </p>
+                <p>
+                    <input type="radio" id="slow" name="velocidad" value="slow">
+                    <label for="slow">Slow</label>
+                </p>
+                <p>
+                    <input type="radio" id="fast" name="velocidad" value="fast">
+                    <label for="fast">Fast</label>
+                </p>
+            </div>
+            <label for="opacidad" class="titulo">Opacidad</label>
+            <div>
+                <p>
+                    <input type="number" id="porcentaje" name="porcentaje" value="0">
+                    <label for="porcentaje">% (Para Fade To)</label>
+                </p>
+            </div>
+            <button id="btn">Aplicar Efectos</button>
+            
+        </section>
+
+      
+            <section class="imagen">
+                <img src="img/girasoles.jpg" alt="girasoles">
+            </section>
+       
+    </main>
 
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
