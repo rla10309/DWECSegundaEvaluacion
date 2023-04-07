@@ -7,10 +7,10 @@ $(document).ready(function () {
             let velocidad = $("#velocidad input:radio[name=velocidad]:checked").val();
             switch(valor){
                 case "show":
-                    $("img").show();
+                    $("img").show(velocidad);
                     break;
                 case "hide":
-                    $("img").hide();
+                    $("img").hide(velocidad);
                     break;
                 case "slide_down":
                     $("img").slideDown(velocidad);

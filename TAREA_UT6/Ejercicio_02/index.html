@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Ejercicio 2</title>
+    <script src="js/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    <main class="container">
+        <h1>PRENSA</h1>
+        <h2>A continuación, algunos enlaces de prensa</h2>
+        <section id="enlaces">
+            <p>Prensa Local: <a href="https://www.lne.es/">La Nueva España</a></p>
+            <p>Prensa Local: <a href="https://www.elcomercio.es/">El Comercio</a></p>
+            <p>Prensa Nacional: <a href="https://elpais.com/">El País</a></p>
+            
+        </section>
+        <p>Número de enlaces a periódicos: <span>0</span></p>
+        <section id="noticias">
+            <h2>Últimas noticias</h2>
+
+            <table id="tabla">
+               
+                    <tr>
+                        <td>
+                           <span>1. </span>
+                           Urbanismo trabaja en la Urbanización de la Fábrica de Armas
+                        </td>
+                        <td>
+                            <button class="eye" id="ocultar"><img src="img/eye-closed.png" alt="ojo_cerrado"></button>
+                            <button class="eye" id="mostrar"><img src="img/eye.png" alt="ojo_abierto"></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                           <span>2. </span>
+                          Una científica sierense logra reducir tumores con nanotubos de grafeno
+                        </td>
+                        <td>
+                            <button class="eye" id="ocultar"><img src="img/eye-closed.png" alt="ojo_cerrado"></button>
+                            <button class="eye" id="mostrar"><img src="img/eye.png" alt="ojo_abierto"></button>
+                        </td>
+                    </tr>
+                   
+                   
+            </table>
+           
+        </section>
+        <div>
+            <label for="nueva">Nueva Noticia: </label>
+            <input type="text" id="nueva" maxlength="150"/>
+            <button id="nueva_noticia">Añadir Noticia</button>
+        </div>
+
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>

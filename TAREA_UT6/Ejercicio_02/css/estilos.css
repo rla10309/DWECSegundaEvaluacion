@@ -1,0 +1,26 @@
+*{
+    box-sizing: border-box;
+}
+.container {
+    margin: 100px auto;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 80%;
+
+}
+ section#noticias {
+    border: 1px solid gainsboro;
+    border-radius: 1rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    
+ }
+ img {
+    width: 35px;
+    height: 25px;
+ }
+ button.eye {
+    background-color: inherit;
+    border: none;
+ }
+
