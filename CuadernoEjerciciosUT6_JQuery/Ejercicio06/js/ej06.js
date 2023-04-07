@@ -1,8 +1,10 @@
 $(document).ready(function () {
     
     $("#btn").click(function(e){
+        e.preventDefault();
         if($("#efectos input:radio").is(":checked")){
             let valor = $("#efectos input:radio[name=efectos]:checked").val();
+            let velocidad = $("#velocidad input:radio[name=velocidad]:checked").val();
             switch(valor){
                 case "show":
                     $("img").show();
@@ -11,16 +13,16 @@ $(document).ready(function () {
                     $("img").hide();
                     break;
                 case "slide_down":
-                    $("img").slideDown("slow");
+                    $("img").slideDown(velocidad);
                     break;
                 case "slide_up":
-                    $("img").slideUp("slow");
+                    $("img").slideUp(velocidad);
                     break;
                 case "fade_out":
-                    $("img").fadeIn("slow");
+                    $("img").fadeIn(velocidad);
                     break;
                 case "fade_to":
-                    $("img").fadeOut("slow");
+                    $("img").fadeOut(velocidad);
                     break;
 
             }
