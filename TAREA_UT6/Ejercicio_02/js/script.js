@@ -23,21 +23,21 @@ $(document).ready(function () {
     });
      //asignamos eventos a los botones
      $("#tabla button:nth-child(1)").each(function (e) {
-        $(this).attr("id", "ocultar");
+        $(this).addClass("ocultar");
       });
       $("#tabla button:nth-child(2)").each(function (e) {
-        $(this).attr("id", "mostrar");
+        $(this).addClass("mostrar");
       });
     $("#nueva").val("");
 
   });
   //evento para ocultar 
-  $("#tabla").on("click","#ocultar", function(e){
+  $("#tabla").on("click",".ocultar", function(e){
     console.log(e);
     $(this).parent().prev("td").css("visibility", "hidden");
   });
   //evento para mostrar
-  $("#tabla").on("click","#mostrar", function(e){
+  $("#tabla").on("click",".mostrar", function(e){
     
     $(this).parent().prev("td").css("visibility", "visible");
   });
