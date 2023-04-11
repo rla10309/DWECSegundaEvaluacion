@@ -21,7 +21,7 @@ $(document).ready(function () {
     $("#tabla :button").each(function () {
       $(this).addClass("eye");
     });
-     //asignamos eventos a los botones
+     //asignamos clases diferentes a los botones
      $("#tabla button:nth-child(1)").each(function (e) {
         $(this).addClass("ocultar");
       });
@@ -33,12 +33,10 @@ $(document).ready(function () {
   });
   //evento para ocultar 
   $("#tabla").on("click",".ocultar", function(e){
-    console.log(e);
     $(this).parent().prev("td").css("visibility", "hidden");
   });
   //evento para mostrar
   $("#tabla").on("click",".mostrar", function(e){
-    
     $(this).parent().prev("td").css("visibility", "visible");
   });
 

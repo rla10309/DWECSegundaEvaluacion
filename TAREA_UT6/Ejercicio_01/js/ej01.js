@@ -1,3 +1,9 @@
+/**
+ * @author Pilar Fernández Nieto
+ * @version 1.0
+ * @description
+ */
+
 window.onload = function () {
   let add_btn = document.getElementById("add");
   let remove_btn = document.getElementById("elimina");
@@ -5,14 +11,17 @@ window.onload = function () {
   let lista = [];
   let messageAficiones = "";
 
+  /*      MANEJADOR EVENTO CLICK PARA AÑADIR AFICIONES     */
   add_btn.addEventListener("click", addAficiones);
 
-  function addAficiones(e) {
-    e.preventDefault();
 
+  /**
+   * 
+   * @param {Event} e 
+   */
+  function addAficiones(e) {
     let selectAdd = document.getElementById("addaficiones");
     let selectRem = document.getElementById("eliminaaficiones");
-
     for (var i = 0; i < selectAdd.options.length; i++) {
       if (selectAdd.options[i].selected === true) {
         lista.push(selectAdd.options[i].text);
@@ -21,6 +30,8 @@ window.onload = function () {
       }
     }
   }
+
+
   enviar_btn.addEventListener("click", function (e) {
     e.preventDefault();
     let nombre = document.querySelector("#nombre").value;
@@ -28,6 +39,8 @@ window.onload = function () {
     let email = document.querySelector("#email").value;
     let message = "";
     let radio = document.querySelector("input[name='sexo']:checked").value;
+
+    /*Gestionamos el mensaje que debe mostrar el alert según las opciones elegidas*/
     if (radio === "hombre") {
       message = "El usuario ";
     } else {
@@ -40,6 +53,8 @@ window.onload = function () {
     } else {
       messageAficiones = "Tiene como aficiones " + lista;
     }
+
+
 
     alert(
       message +
