@@ -30,3 +30,9 @@ fieldset#datos {
 .no_display {
     display:none;
 }
+.error {
+    border: 1px solid red;
+}
+input#enviar {
+    margin: 1rem;
+}
