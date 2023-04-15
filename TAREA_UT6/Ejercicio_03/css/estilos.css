@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+
+}
+.container {
+    align-items: baseline;
+    display:flex;
+    justify-content: space-around;
+    position: relative;
+    margin: 0 auto;
+    width: 80%;
+}
+.section {
+  
+    text-align: center;
+}
+button#pulsame {
+    width: 75px;
+    height: 50px;
+    position: absolute;
+    top: 400px;
+    left: 100px;
+
+    
+}
+span#crono {
+    padding: 1rem;
+    width: 30px;
+}
