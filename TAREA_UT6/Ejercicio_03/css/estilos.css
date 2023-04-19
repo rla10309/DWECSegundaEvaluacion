@@ -1,25 +1,54 @@
 * {
     box-sizing: border-box;
-
 }
+body, button {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .container {
     align-items: baseline;
     display:flex;
     justify-content: space-around;
     position: relative;
     margin: 0 auto;
+    text-align: center;
     width: 80%;
 }
 .section {
-  
     text-align: center;
+}
+
+#instrucciones {
+    background-color: powderblue;
+    padding: 1rem;
+}
+div#panel {
+    background-color:lightyellow;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    display: none;
+    
+    width: 75%;
+    margin: 2rem auto;
+    padding: 1rem;
+    position: relative;
+    text-align: justify;
+}
+div#panel p {
+    line-height: 1.5;
+    word-spacing: 1px;
+}
+div#panel button {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
 }
 button#pulsame {
     width: 75px;
     height: 50px;
     position: absolute;
     top: 400px;
-    left: 100px;
+    left: 400px;
 
     
 }

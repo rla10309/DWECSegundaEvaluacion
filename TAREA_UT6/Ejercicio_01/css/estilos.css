@@ -3,22 +3,41 @@
 }
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    width: 70%;
-    margin: 0 auto;
+    width: 60%;
+    margin: 2rem auto;
 }
+
 header{
+    margin-top: 2rem;
+    background-color: black;
+    color: white;
+    padding: 0.5rem;
     text-align: center;
 }
 fieldset#datos {
     border: none;
 }
+
+fieldset {
+    border: 0.5px solid black;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+input[type="submit"], button {
+    padding: 10px 15px;
+    border-width: 1px;
+    border-radius: 5px;
+}
+
 .container {
     width: 70%;
-    width: 0 auto;
+    margin: 0 auto;
 }
 .d-flex {
     display: flex;
     align-items: flex-end;
+    justify-content: center;
     gap: 2rem;
 }
 .d-flex select{

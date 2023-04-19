@@ -28,7 +28,7 @@ window.onload = function () {
     let selectRem = document.getElementById("eliminaaficiones");
     for (var i = 0; i < selectAdd.options.length; i++) {
       if (selectAdd.options[i].selected === true) {
-        //array donde almancenamos las aficiones para luego imprimir
+        //array donde almacenamos las aficiones para luego imprimir
         lista.push(selectAdd.options[i].text);
         selectAdd.options[i].classList.add("no_display");
         selectRem.options[i].classList.remove("no_display");
@@ -37,9 +37,10 @@ window.onload = function () {
   }
 
   /**
-   * remvoeAficiones
+   * removeAficiones
    * @param {Event} e
-   * elimina las aficiones seleccionadas
+   * elimina las aficiones seleccionadas en caso de error 
+   *
    */
   function removeAficiones(e) {
     e.preventDefault();
@@ -47,8 +48,9 @@ window.onload = function () {
     let selectRem = document.getElementById("eliminaaficiones");
     for (var i = 0; i < selectRem.options.length; i++) {
       if (selectRem.options[i].selected === true) {
-        let index = lista.indexOf(selectRem.options[i]);
-        lista.splice(index);
+        /*recorremos el array con la lista de aficiones para encontrar la posición de la afición a eliminar y así poder eliminarla con el método splice y que en el resultado final del alert no se muestre*/
+        let index = lista.indexOf(selectRem.options[i].textContent);
+        lista.splice(index, 1);
         selectRem.options[i].classList.add("no_display");
         selectAdd.options[i].classList.remove("no_display");
       }
@@ -61,8 +63,9 @@ window.onload = function () {
     let nombre = document.querySelector("#nombre").value;
     let apellidos = document.querySelector("#apellidos").value;
     let email = document.querySelector("#email").value;
-    let message = "";
     let radio = document.querySelector("input[name='sexo']:checked").value;
+    
+    let message = "";
 
     if (validaFormulario()) {
       /*Gestionamos el mensaje que debe mostrar el alert según las opciones elegidas*/
@@ -74,9 +77,9 @@ window.onload = function () {
       if (lista.length == 0) {
         messageAficiones = "No tiene aficiones.";
       } else if (lista.length == 1) {
-        messageAficiones = "Tiene como afición " + lista;
+        messageAficiones = "Tiene como afición: " + lista;
       } else {
-        messageAficiones = "Tiene como aficiones " + lista;
+        messageAficiones = "Tiene como aficiones: " + lista;
       }
 
       alert(
@@ -101,21 +104,19 @@ window.onload = function () {
  * validaFormulario
  * @returns {Boolean}
  * función que valida el formulario según los parámetros requeridos
+ * el campo "sexo" no requiere validación porque tiene una opción activada por defecto
  */
 function validaFormulario() {
   let nombre = document.querySelector("#nombre").value;
   let apellidos = document.querySelector("#apellidos").value;
   let email = document.querySelector("#email").value;
-  let radio = document.querySelector("input[name='sexo']:checked").value;
+  
 
-  if (
-    validaNombre(nombre) &&
-    validaApellidos(apellidos) &&
-    validaMail(email) &&
-    validaRadioButton(radio)
-  ) {
+  if (validaNombre(nombre) && validaApellidos(apellidos) && validaMail(email)) {
     return true;
-  } else return false;
+  } else {
+     return false;
+  }
 }
 
 
@@ -148,6 +149,7 @@ function validaApellidos(apellidos) {
     return true;
   } else {
     document.getElementById("apellidos").classList.add("error");
+    
     return false;
   }
 }
