@@ -28,6 +28,12 @@
             "request": "launch",
             "name": "Firefox",
             "file": "C:\\Users\\usuario\\Desktop\\DAW PILAR\\CLIENTE\\DWECSegunda"
+        },
+        {
+            "type":"chrome",
+            "request": "launch",
+            "name":"launchHtdocs",
+            "file":"C:\\Program Files\\xampp\\htdocs"
         }
         
     ]

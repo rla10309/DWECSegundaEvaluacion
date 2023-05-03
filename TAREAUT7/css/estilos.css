@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+}
+#uso_legal p{
+    margin:0;
+    font-size: 0.8rem;
+}
+#info_dactual h3,
+#info_d1 h3,
+#info_d2 h3,
+#info_d3 h3
+{
+    margin: 0;
+}
